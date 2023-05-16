@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-emoji"
+    }
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^0.4.6",
+    "@nuxtjs/device": "^3.1.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/tailwindcss": "^6.6.8",
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/nuxt": "^10.1.2",
+    "cz-conventional-emoji": "^1.0.2",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "nuxt": "3.4.3",
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.10",
+    "axios": "^1.4.0"
+  }
+}
