@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores']
   },
+  plugins: [{ src: '~/plugins/beforeunload', mode: 'client' }],
 
   modules: [
     '@nuxtjs/tailwindcss',
