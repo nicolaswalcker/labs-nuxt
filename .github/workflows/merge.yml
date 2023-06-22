@@ -11,5 +11,4 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
-            echo "Merging branch into main..."
             node send_message.js
