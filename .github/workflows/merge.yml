@@ -1,14 +1,19 @@
-name: Merge
+name: Send Discord Message on PR Merge
 on:
   pull_request:
-    branches:
-      - main
+    merged:
+
 jobs:
-  merge:
+  send_message:
     runs-on: ubuntu-latest
     steps:
-      - name: Merge branch
-        uses: actions/github-script@v3
-        with:
-          script: |
-            node send_message.js
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install Discord.js
+        run: |
+          yarn install
+
+      - name: Send message
+        run: |
+          node send_message.js
