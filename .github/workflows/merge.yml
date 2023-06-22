@@ -16,4 +16,4 @@ jobs:
 
       - name: Send message
         run: |
-          node send_message.js
+          node ./send_message.js
