@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/eslint-module',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    'nuxt-icon'
 
   ],
   devtools: { enabled: true }

@@ -17,6 +17,10 @@
     "@typescript-eslint/parser": "^6.4.1",
     "@vueuse/nuxt": "^10.3.0",
     "eslint": "^8.47.0",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "nuxt-icon": "^0.5.0"
+  },
+  "dependencies": {
+    "resend": "^1.0.0"
   }
 }
