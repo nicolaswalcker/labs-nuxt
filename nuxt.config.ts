@@ -5,7 +5,9 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@vueuse/nuxt',
     'nuxt-icon'
-
   ],
+  eslint: {
+    lintOnStart: false
+  },
   devtools: { enabled: true }
 })
