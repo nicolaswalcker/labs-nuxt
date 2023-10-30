@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^3.8.0
     version: 3.8.0(@types/node@20.8.8)(eslint@8.52.0)(typescript@5.1.6)(vite@4.5.0)
   nuxt-icon:
-    specifier: ^0.5.0
-    version: 0.5.0(vue@3.3.4)
+    specifier: ^0.6.1
+    version: 0.6.1(vue@3.3.4)
 
 packages:
 
@@ -6629,11 +6629,11 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt-icon@0.5.0(vue@3.3.4):
-    resolution: {integrity: sha512-ND4yh8kW4VyIbORP3cWjgVrOAvy6QSDFDTJltakdqmxVfVysNIs/bx2NzlkHeR1EOS8E/jVcemfTPmRsJ7WUVw==}
+  /nuxt-icon@0.6.1(vue@3.3.4):
+    resolution: {integrity: sha512-a4/MEmbP2hXB0sLWBqevC+569FADEMs+VfYJ6nzbktUSJY57/PoHyen0PtqAAkMjGGhHgDVHAcjy5RCJyYZRYg==}
     dependencies:
       '@iconify/vue': 4.1.1(vue@3.3.4)
-      '@nuxt/kit': 3.6.5
+      '@nuxt/kit': 3.8.0
     transitivePeerDependencies:
       - rollup
       - supports-color
