@@ -21,6 +21,6 @@
     "nuxt-icon": "^0.5.0"
   },
   "dependencies": {
-    "resend": "^1.1.0"
+    "resend": "^2.0.0"
   }
 }
