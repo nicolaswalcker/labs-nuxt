@@ -11,8 +11,10 @@ jobs:
   telegram:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./
+      - name: Checkout
+          uses: actions/checkout@v2
+      - name: Send message
+          uses: ./
         with:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           channelId: ${{ secrets.TELEGRAM_CHANNEL_ID }}
