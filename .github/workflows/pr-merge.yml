@@ -1,18 +1,35 @@
-name: Pull request merge
+name: Telegram Notification
 
 on:
   pull_request:
     types:
       - closed
-    branches:
-      - main
 
 jobs:
-  telegram:
+  notify:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          channelId: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Send Telegram notification
+        run: |
+          TELEGRAM_TOKEN=$TELEGRAM_TOKEN
+          TELEGRAM_CHANNEL_ID=$TELEGRAM_CHANNEL_ID
+          PR_TITLE=$(curl -s "https://api.github.com/repos/$GITHUB_REPOSITORY/pulls/$GITHUB_EVENT_NUMBER" | jq -r .title)
+
+          MESSAGE="Pull request \"$PR_TITLE\" foi mesclada na branch principal!"
+
+          curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHANNEL_ID" -d "text=$MESSAGE"
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
