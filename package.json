@@ -14,7 +14,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^20.8.8",
-    "@typescript-eslint/parser": "^6.9.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "@vueuse/nuxt": "^10.5.0",
     "eslint": "^8.52.0",
     "nuxt": "^3.8.0",
